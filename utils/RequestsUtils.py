@@ -8,6 +8,7 @@ class ApiRequest(object):
     """
 
     # 请求方法get
+    @staticmethod
     def get_method(self, url, data=None, header=None):
 
         if header is not None:
@@ -18,6 +19,7 @@ class ApiRequest(object):
         return res
 
     # 请求方法post
+    @staticmethod
     def post_method(self, url, data=None, header=None):
         global res
         if header is not None:
@@ -34,6 +36,7 @@ class ApiRequest(object):
             return res
 
     # 请求方法put
+    @staticmethod
     def put_method(self, url, data=None, header=None):
         if header is not None:
             res = requests.put(url, json=data, headers=header)
@@ -43,6 +46,7 @@ class ApiRequest(object):
         return res
 
     # 请求方法delete
+    @staticmethod
     def delete_method(self, url, data=None, header=None):
         if header is not None:
             res = requests.delete(url, json=data, headers=header)
